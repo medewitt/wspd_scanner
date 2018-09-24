@@ -1,0 +1,380 @@
+18000588     010118 1819 50B VIOLATION                  2500  GREEN OAKS CT                           
+1800011      010118 0046 AGG ASSAULT FIREARM            5900  OLD PLANK RD                            
+1800102      010118 1534 AGG ASSAULT KNIFE              200   PLAZA HOLLOW DR                         
+18000809     010118 2343 ALARMS                         0     MILLER ST                               
+18000675     010118 2057 ALARMS                         200   EVERIDGE RD                             
+18000621     010118 1935 ALARMS                         1300  ARGONNE BV                              
+18000620     010118 1935 ALARMS                         4600  BROWNSBORO RD                           
+18000575     010118 1749 ALARMS                         400   WEST END BV                             
+18000560     010118 1721 ALARMS                         2300  N PATTERSON AV                          
+18000532     010118 1645 ALARMS                         3100  BIRCHWAY LN                             
+18000498     010118 1528 ALARMS                         2600  REYNOLDA RD                             
+18000442     010118 1408 ALARMS                         2400  PATRIA ST                               
+18000422     010118 1337 ALARMS                         200   CAPISTRANO DR                           
+1800076      010118 1245 ALARMS                         5600  W HANES MILL RD                         
+18000382     010118 1227 ALARMS                         1000  TREBLE CT                               
+18000377     010118 1217 ALARMS                         2200  BRINDLE ST                              
+18000321     010118 1026 ALARMS                         4900  HOME RD                                 
+18000318     010118 1022 ALARMS                         600   SAINT GEORGE SQUARE CT                  
+18000310     010118 1012 ALARMS                         1400  NEW WALKERTOWN RD                       
+18000303     010118 0955 ALARMS                         2100  COUNTRY CLUB RD                         
+18000289     010118 0920 ALARMS                         5000  PETERS CREEK PW                         
+18000283     010118 0910 ALARMS                         2800  HERMITAGE DR                            
+18000281     010118 0909 ALARMS                         2500  FOREST DR                               
+18000275     010118 0837 ALARMS                         1200  REYNOLDS FOREST DR                      
+18000271     010118 0817 ALARMS                         500   BARNES RD                               
+18000262     010118 0753 ALARMS                         3100  MAPLEWOOD AV                            
+18000252     010118 0733 ALARMS                         100   LUZELLE DR                              
+18000245     010118 0645 ALARMS                         1700  WILLARD RD                              
+18000233     010118 0540 ALARMS                         500   PAIGEBROOK DR                           
+18000227     010118 0502 ALARMS                         700   N CHERRY ST                             
+18000220     010118 0450 ALARMS                         1100  BURKE ST                                
+18000202     010118 0406 ALARMS                         2800  REYNOLDA RD                             
+18000156     010118 0204 ALARMS                         3500  VEST MILL RD                            
+18000100     010118 0055 ALARMS                         3900  WHITFIELD RD                            
+18000048     010118 0013 ALARMS                         800   CHARLES CT                              
+18000017     010118 0005 ALARMS                         1500  WAUGHTOWN ST                            
+18000541     010118 1656 ANIMAL CRUELTY                 1900  BERTHA ST                               
+18000746     010118 2245 ANIMAL OTHER                   100   N CLEVELAND AV                          
+18000724     010118 2214 ANIMAL OTHER                   2700  E SPRAGUE ST                            
+18000713     010118 2206 ANIMAL OTHER                   2200  HOLLYROOD ST                            
+18000665     010118 2038 ANIMAL OTHER                   4600  SAINTS DELIGHT CHURCH RD                
+18000636     010118 1952 ANIMAL OTHER                   5000  SHATTALON DR                            
+1800071      010118 1143 ANIMAL VICIOUS                 3800  CRUSADE DR                              
+18000137     010118 0132 ANIMAL VICIOUS                 4700  SHATTALON CR                            
+1800141      010118 2246 ASSAULT                        4500  N CHERRY ST                             
+1800129      010118 2120 ASSAULT                        1700  PLEASANT ST                             
+1800124      010118 2058 ASSAULT                        5200  LARKSPUR DR                             
+1800096      010118 1520 ASSAULT                        1500  ARDSLEY ST                              
+1800086      010118 1435 ASSAULT                        5400  COUNTRYSIDE DR                          
+18000440     010118 1404 ASSAULT                        100   FLINTWOOD CT                            
+1800081      010118 1346 ASSAULT                        700   W FIRST ST/N BROAD ST                   
+1800068      010118 1153 ASSAULT                        1000  TURTLE ROCK LN                          
+1800062      010118 1025 ASSAULT                        500   OLD TIMBER RD                           
+1800057      010118 0934 ASSAULT                        1900  MILFORD ST                              
+1800055      010118 0718 ASSAULT                        5700  INDIANA AV                              
+18000229     010118 0528 ASSAULT                        600   PETERS CREEK PW                         
+1800039      010118 0315 ASSAULT                        1500  WOODS RD                                
+1800030      010118 0159 ASSAULT                        400   BRANNIGAN VILLAGE DR                    
+18000135     010118 0131 ASSAULT                        1000  S SUNSET DR                             
+1800014      010118 0051 ASSAULT                        300   GLENDARE DR                             
+1800016      010118 0044 ASSAULT                        2600  CHESTNUT HEIGHTS RD                     
+18000776     010118 2309 ASSIST MOTORIST                100   S BROAD ST                              
+18000769     010118 2303 ASSIST MOTORIST                2800  UNIVERSITY PW                           
+18000617     010118 1932 ASSIST MOTORIST                0     SB 52/S MAIN ST                         
+18000601     010118 1845 ASSIST MOTORIST                2000  GREENWAY AV/N GLENN AV                  
+18000591     010118 1825 ASSIST MOTORIST                1500  GLENN CENTER DR                         
+18000570     010118 1731 ASSIST MOTORIST                2100  SILAS CREEK PW/MILLER ST                
+18000444     010118 1414 ASSIST MOTORIST                300   PETERS CREEK PW                         
+18000364     010118 1159 ASSIST MOTORIST                0     WB 40/PETERS CREEK PW                   
+18000251     010118 0727 ASSIST MOTORIST                0     NB 421/NB 52                            
+18000246     010118 0650 ASSIST MOTORIST                800   E SPRAGUE ST/THOMASVILLE RD             
+18000203     010118 0406 ASSIST MOTORIST                1100  N MARTIN LUTHER KING JR DR/IVY AV       
+18000123     010118 0113 ASSIST MOTORIST                3900  CARVER SCHOOL RD/WOODFIN PL             
+18000787     010118 2316 ASSIST PERSONNEL OUTSIDE AGENC 5000  LANSING DR                              
+1800093      010118 1458 B&E RESIDENCE                  1712  LINCOLN AV                              
+1800083      010118 1402 B&E RESIDENCE                  180   WILLOW OAK DR                           
+1800079      010118 1330 B&E RESIDENCE                  2305  MULLINS DR                              
+1800074      010118 1258 B&E RESIDENCE                  2725  DREWRY LN                               
+1800075      010118 1227 B&E RESIDENCE                  2715  DREWRY LN                               
+1800069      010118 1156 B&E RESIDENCE                  1965  DEW AV                                  
+1800036      010118 0302 B&E RESIDENCE                  2940  BROADBAY DR                             
+1800012      010118 0038 B&E RESIDENCE                  722   MOCK ST                                 
+18000701     010118 2151 BARKING DOGS                   1200  MIZPAH CHURCH RD                        
+18000518     010118 1553 CHECK ON WELFARE OF PERSON     100   CEDAR COVE LN                           
+18000405     010118 1315 CHECK ON WELFARE OF PERSON     1600  E THIRD ST                              
+18000339     010118 1055 CHECK ON WELFARE OF PERSON     900   WASHINGTON AV                           
+18000287     010118 0917 CHECK ON WELFARE OF PERSON     4400  ANSLEY DR                               
+18000264     010118 0757 CHECK ON WELFARE OF PERSON     5000  PRESSMAN DR                             
+1800116      010118 1947 COMMUNICATING THREATS          2400  SPRING GROVE                            
+1800110      010118 1807 DECEASED PERSON                1700  OLD SALISBURY RD                        
+1800064      010118 1035 DECEASED PERSON                1300  BROOKWOOD DR                            
+18000797     010118 2325 DISTURBANCE                    900   WAUGHTOWN ST                            
+18000777     010118 2310 DISTURBANCE                    2300  N PATTERSON AV                          
+18000759     010118 2255 DISTURBANCE                    700   BROOKSTOWN AV                           
+18000728     010118 2217 DISTURBANCE                    200   VILLAGE CREEK CR                        
+18000715     010118 2208 DISTURBANCE                    100   COLUMBINE DR                            
+18000710     010118 2205 DISTURBANCE                    1500  WOODS RD                                
+18000704     010118 2153 DISTURBANCE                    4500  GARDEN ST/DORIS ST                      
+1800122      010118 2028 DISTURBANCE                    400   ROCKBRIDGE DR                           
+18000648     010118 2013 DISTURBANCE                    400   TWENTY-FOURTH AND ONE-HALF ST           
+18000639     010118 1957 DISTURBANCE                    5400  COUNTRYSIDE DR                          
+1800118      010118 1956 DISTURBANCE                    400   E SIXTEENTH ST                          
+18000633     010118 1951 DISTURBANCE                    2000  K COURT AV                              
+18000623     010118 1936 DISTURBANCE                    1700  OVERCREEK CR/PARKSIDE MEADOW DR         
+18000609     010118 1909 DISTURBANCE                    2800  MILLBROOK DR                            
+18000592     010118 1825 DISTURBANCE                    700   FERRELL CT                              
+18000517     010118 1552 DISTURBANCE                    100   ECHO GLEN DR                            
+18000479     010118 1509 DISTURBANCE                    1500  E TWENTY-FIFTH ST                       
+18000476     010118 1459 DISTURBANCE                    1400  NEW WALKERTOWN RD                       
+18000470     010118 1456 DISTURBANCE                    2200  MANCHESTER ST                           
+1800090      010118 1453 DISTURBANCE                    600   WAUGHTOWN ST                            
+1800088      010118 1451 DISTURBANCE                    3800  OXFORD STATION WY                       
+18000459     010118 1437 DISTURBANCE                    1600  ZUIDER ZEE CT                           
+18000455     010118 1431 DISTURBANCE                    300   E SPRAGUE ST                            
+18000452     010118 1428 DISTURBANCE                    1200  E TWENTY-THIRD ST                       
+1800082      010118 1423 DISTURBANCE                    5000  SPLIT RAIL CR                           
+18000437     010118 1401 DISTURBANCE                    2200  GOLDEN OAKS CR                          
+18000436     010118 1359 DISTURBANCE                    3000  WAUGHTOWN ST                            
+18000412     010118 1322 DISTURBANCE                    1200  MARNE ST                                
+1800078      010118 1222 DISTURBANCE                    5100  AMBERCREST DR                           
+18000376     010118 1215 DISTURBANCE                    4800  MERRIMAC ST                             
+18000372     010118 1209 DISTURBANCE                    900   E SPRAGUE ST                            
+18000367     010118 1205 DISTURBANCE                    3100  NEW WALKERTOWN RD                       
+1800059      010118 1004 DISTURBANCE                    1400  THURMOND ST                             
+1800063      010118 0927 DISTURBANCE                    1300  N MAIN ST                               
+18000285     010118 0912 DISTURBANCE                    1400  HARDING ST                              
+18000235     010118 0554 DISTURBANCE                    3700  KONNOAK DR                              
+1800048      010118 0445 DISTURBANCE                    4000  DALTON ST                               
+18000199     010118 0402 DISTURBANCE                    3400  OLD GREENSBORO RD                       
+18000193     010118 0339 DISTURBANCE                    100   VINEYARD BROOK CT                       
+18000186     010118 0318 DISTURBANCE                    3000  IRIS ST                                 
+1800035      010118 0252 DISTURBANCE                    2300  REDBUD LN                               
+18000174     010118 0240 DISTURBANCE                    4200  TRACE VIEW DR                           
+18000165     010118 0225 DISTURBANCE                    300   W CLEMMONSVILLE RD                      
+18000163     010118 0218 DISTURBANCE                    3800  WANGER DR                               
+1800025      010118 0136 DISTURBANCE                    400   JONESTOWN RD                            
+18000119     010118 0111 DISTURBANCE                    200   TROTTERS WAY CT                         
+18000101     010118 0056 DISTURBANCE                    1900  MILFORD ST                              
+18000097     010118 0052 DISTURBANCE                    2700  REYNOLDA RD                             
+18000085     010118 0040 DISTURBANCE                    4900  HUNT CLUB RD                            
+18000063     010118 0026 DISTURBANCE                    700   W SPRAGUE ST                            
+18000047     010118 0013 DISTURBANCE                    2000  E TWELFTH ST                            
+18000042     010118 0011 DISTURBANCE                    400   BYERLY RD/TRAVIS ST                     
+18000020     010118 0006 DISTURBANCE                    1600  W NORTHWEST BV                          
+18000019     010118 0005 DISTURBANCE                    900   E THIRD ST                              
+18000009     010118 0002 DISTURBANCE                    3600  CLINARD AV                              
+18000003     010118 0001 DISTURBANCE                    100   N SPRING ST                             
+18000002     010118 0000 DISTURBANCE                    2500  MID SALEM DR                            
+1800143      010118 2335 DRUG VIOLATION                 200   POLO RD/REICH ST                        
+1800135      010118 2219 DRUG VIOLATION                 3400  PARKWAY VILLAGE CR                      
+18000568     010118 1728 DRUG VIOLATION                 3700  AVERA AV                                
+1800108      010118 1727 DRUG VIOLATION                 900   N CLEVELAND AV                          
+1800106      010118 1650 DRUG VIOLATION                 2500  MARBLE ST                               
+18000513     010118 1545 DRUG VIOLATION                 2500  MARBLE ST                               
+1800084      010118 1356 DRUG VIOLATION                 400   W HANES MILL RD                         
+1800024      010118 0105 DRUG VIOLATION                 2700  LUDWIG ST                               
+1800046      010118 0414 DUI                            0     NB 52/AKRON DR                          
+1800041      010118 0341 DUI                            2000  QUEEN ST/MEDICAL CENTER BV              
+1800027      010118 0201 DUI                            1500  REYNOLDA RD/N STRATFORD RD              
+1800015      010118 0101 DUI                            0     PETERS CREEK PW_EB 40 RA/EB 40          
+1800021      010118 0035 DUI                            6700  SILAS CREEK PW/POLO RD                  
+1800006      010118 0016 DUI                            1100  W FOURTH ST                             
+18000738     010118 2231 E911 HANGUP                    400   E SIXTEENTH ST                          
+18000573     010118 1741 E911 HANGUP                    3200  ZUIDER ZEE DR                           
+1800142      010118 2313 FIREARM VIOLATION              3000  S MAIN ST                               
+18000750     010118 2250 FIREARM VIOLATION              3200  RIDGEWOOD PLACE DR                      
+1800132      010118 2216 FIREARM VIOLATION              3300  RIDGEBACK DR                            
+1800121      010118 2025 FIREARM VIOLATION              3700  KONNOAK DR                              
+1800087      010118 1446 FIREARM VIOLATION              1700  QUARRY RD                               
+1800040      010118 0335 FIREARM VIOLATION              700   FERRELL CT                              
+1800029      010118 0232 FIREARM VIOLATION              2800  PIEDMONT CR                             
+18000148     010118 0154 FIREARM VIOLATION              3900  OLD VINEYARD RD                         
+18000122     010118 0112 FIREARM VIOLATION              500   LOUISE WILSON LN                        
+18000117     010118 0110 FIREARM VIOLATION              500   WEISNER ST                              
+18000106     010118 0102 FIREARM VIOLATION              1800  LAFAYETTE AV                            
+18000090     010118 0045 FIREARM VIOLATION              1600  HOPE LN                                 
+18000078     010118 0035 FIREARM VIOLATION              1900  E TWENTY-FIFTH ST                       
+18000068     010118 0028 FIREARM VIOLATION              3600  YARBROUGH AV                            
+18000062     010118 0024 FIREARM VIOLATION              1300  E SECOND ST                             
+18000061     010118 0023 FIREARM VIOLATION              3500  BERCHFIELD DR                           
+18000058     010118 0019 FIREARM VIOLATION              800   SILAS CREEK PW/BUCHANAN ST              
+18000054     010118 0016 FIREARM VIOLATION              200   CLAYTON ST                              
+1800008      010118 0016 FIREARM VIOLATION              2800  PIEDMONT CR                             
+18000045     010118 0011 FIREARM VIOLATION              3800  OLD LEXINGTON RD                        
+18000040     010118 0010 FIREARM VIOLATION              500   WEISNER ST                              
+18000038     010118 0010 FIREARM VIOLATION              1100  E TWENTY-FIRST ST/N CLEVELAND AV        
+18000030     010118 0008 FIREARM VIOLATION              2800  STOCKTON ST                             
+18000028     010118 0007 FIREARM VIOLATION              100   STAGECOACH RD                           
+18000024     010118 0006 FIREARM VIOLATION              3100  LUTHER ST                               
+18000021     010118 0006 FIREARM VIOLATION              5500  HIGHLAND TRACE CT                       
+18000018     010118 0005 FIREARM VIOLATION              4000  YARBROUGH AV                            
+18000016     010118 0004 FIREARM VIOLATION              3600  CASH DR                                 
+1800005      010118 0004 FIREARM VIOLATION              600   MCCREARY ST                             
+18000014     010118 0004 FIREARM VIOLATION              4100  BETHANIA STATION RD                     
+18000012     010118 0003 FIREARM VIOLATION              900   THURMOND ST                             
+18000008     010118 0002 FIREARM VIOLATION              500   PETERS CREEK PW/W ACADEMY ST            
+18000007     010118 0001 FIREARM VIOLATION              2800  MAYAN CT                                
+18000005     010118 0001 FIREARM VIOLATION              100   FINLEY CR                               
+1800007      010118 0001 FIREARM VIOLATION              700   FERRELL CT                              
+18000001     010118 0000 FIREARM VIOLATION              0     SALEM GARDENS DR                        
+18000793     010118 2322 HARASSING PHONE CALLS          4600  S MAIN ST                               
+1800127      010118 2004 LARCENY                        4300  S MAIN ST                               
+18000508     010118 1540 LARCENY                        900   WAUGHTOWN ST                            
+18000486     010118 1513 LARCENY                        1000  N CAMERON AV                            
+1800097      010118 1512 LARCENY                        3400  PARKWAY VILLAGE CR                      
+1800092      010118 1511 LARCENY                        500   N MARTIN LUTHER KING JR DR              
+1800077      010118 1305 LARCENY                        900   HANES MALL BV                           
+1800072      010118 1233 LARCENY                        900   HANES MALL BV                           
+1800032      010118 0259 LARCENY                        3000  WAUGHTOWN ST                            
+1800137      010118 2249 LARCENY FROM AUTO              1800  BRANTLEY ST                             
+1800133      010118 2217 LARCENY FROM AUTO              3400  ROYAL HIGHLAND DR                       
+1800136      010118 2254 LARCENY SHOPLIFTING            3400  PARKWAY VILLAGE CR                      
+18000810     010118 2356 LICENSE CHECK                  1500  E TWENTY-THIRD ST                       
+18000807     010118 2342 LICENSE CHECK                  1300  UNIVERSITY PW/W FOURTEENTH ST           
+18000801     010118 2330 LICENSE CHECK                  400   N CHERRY ST                             
+18000795     010118 2324 LICENSE CHECK                  9900  SILAS CREEK PW/FAIRLAWN DR              
+18000762     010118 2257 LICENSE CHECK                  6200  SILAS CREEK PW/GOOD HOPE RD             
+18000753     010118 2253 LICENSE CHECK                  1700  TIMBER COVE CT                          
+18000743     010118 2239 LICENSE CHECK                  2900  EBERT RD/ARDMORE RD                     
+18000725     010118 2215 LICENSE CHECK                  0     NB 421/NB 421_S MAIN ST RA              
+18000723     010118 2214 LICENSE CHECK                  500   CHANDLER ST                             
+18000722     010118 2213 LICENSE CHECK                  1000  REYNOLDA RD/BUENA VISTA RD              
+18000720     010118 2212 LICENSE CHECK                  2900  EBERT RD/ARDMORE RD                     
+18000718     010118 2211 LICENSE CHECK                  500   WATERWORKS RD                           
+18000706     010118 2157 LICENSE CHECK                  1300  W FIRST ST                              
+18000702     010118 2151 LICENSE CHECK                  0     UNIVERSITY PW/NB 52                     
+18000684     010118 2107 LICENSE CHECK                  1000  POLO RD/LONG DR                         
+18000670     010118 2053 LICENSE CHECK                  1000  N CLEVELAND AV/E ELEVENTH ST            
+18000667     010118 2047 LICENSE CHECK                  0     NB 421/PETERS CREEK PW                  
+18000666     010118 2042 LICENSE CHECK                  0     PETERS CREEK PW/NB 421                  
+18000661     010118 2028 LICENSE CHECK                  300   N MARSHALL ST/W FOURTH ST               
+18000653     010118 2020 LICENSE CHECK                  600   HANES MALL BV/BROOKVIEW HILLS BV        
+18000624     010118 1937 LICENSE CHECK                  4700  LANCASTER PARK DR                       
+18000595     010118 1828 LICENSE CHECK                  0     NB 421/S MARTIN LUTHER KING JR DR       
+18000590     010118 1823 LICENSE CHECK                  5800  SILAS CREEK PW/PARTRIDGE LN             
+18000586     010118 1815 LICENSE CHECK                  0     SB 421/SB 421_REIDSVILLE RD RA          
+18000585     010118 1811 LICENSE CHECK                  0                                             
+18000582     010118 1802 LICENSE CHECK                  500   N MARTIN LUTHER KING JR DR              
+18000576     010118 1750 LICENSE CHECK                  1100  N CLEVELAND AV/E TWELFTH ST             
+1800107      010118 1725 LICENSE CHECK                  0     WAKE FOREST RD/REYNOLDA RD              
+18000563     010118 1723 LICENSE CHECK                  1300  WESTGATE CENTER DR/ASHLEYBROOK LN       
+18000552     010118 1710 LICENSE CHECK                  2000  DACIAN ST/JUNIA AV                      
+18000540     010118 1655 LICENSE CHECK                  0     NB 421/S MARTIN LUTHER KING JR DR       
+18000538     010118 1651 LICENSE CHECK                  0     NB 421/S MARTIN LUTHER KING JR DR       
+18000531     010118 1644 LICENSE CHECK                  0     NB 421/S MARTIN LUTHER KING JR DR       
+18000491     010118 1517 LICENSE CHECK                  300   S STRATFORD RD                          
+18000478     010118 1507 LICENSE CHECK                  7900  NORTH POINT BV                          
+18000465     010118 1447 LICENSE CHECK                  0     NB 421/NB 421_NB SILAS CREEK PW RA      
+18000430     010118 1346 LICENSE CHECK                  100   HANES MALL BV                           
+18000403     010118 1305 LICENSE CHECK                  3300  THOMASVILLE RD/LOUISE RD                
+18000351     010118 1125 LICENSE CHECK                  3200  THOMASVILLE RD/CHARLES ST               
+18000335     010118 1046 LICENSE CHECK                  0     TIMLIC AV                               
+18000284     010118 0911 LICENSE CHECK                  500   E SPRAGUE ST/OLD LEXINGTON RD           
+18000188     010118 0328 LICENSE CHECK                  0     GOODYEAR DR/SILAS CREEK PW              
+1800034      010118 0240 LICENSE CHECK                  1500  REYNOLDA RD/N STRATFORD RD              
+18000166     010118 0227 LICENSE CHECK                  0     NB 421/PETERS CREEK PW                  
+18000133     010118 0129 LICENSE CHECK                  0     E CLEMMONSVILLE RD/E CLEMMONSVILLE RD_NB
+18000125     010118 0117 LICENSE CHECK                  0     SB 311/RIDGEWOOD RD                     
+18000120     010118 0111 LICENSE CHECK                  0     SB 421/KNOLLWOOD ST                     
+18000094     010118 0049 LICENSE CHECK                  1300  PETERS CREEK PW                         
+18000093     010118 0049 LICENSE CHECK                  2000  ROBINHOOD RD/N STRATFORD RD             
+18000086     010118 0040 LICENSE CHECK                  1300  GLADE ST/N SUNSET DR                    
+18000077     010118 0035 LICENSE CHECK                  600   WEST END BV/CLOVER ST                   
+18000074     010118 0031 LICENSE CHECK                  500   PETERS CREEK PW/W ACADEMY ST            
+18000067     010118 0027 LICENSE CHECK                  800   WEST END BV/FORSYTH ST                  
+18000035     010118 0008 LICENSE CHECK                  400   N MARSHALL ST                           
+18000027     010118 0007 LICENSE CHECK                  0     S STRATFORD RD/EB 40                    
+18000530     010118 1638 LIQUOR LAW VIOLATION           600   ANSON ST                                
+1800152      010118 2254 MENTAL SUBJECT                 1100  SALEM VALLEY RD                         
+1800154      010118 2253 MENTAL SUBJECT                 600   MOUNT VERNON AV                         
+1800123      010118 2021 MENTAL SUBJECT                 3300  SILAS CREEK PW                          
+1800130      010118 1712 MENTAL SUBJECT                 1900  MILFORD ST                              
+18000279     010118 0902 MENTAL SUBJECT                 800   PEACHTREE MEADOWS CR                    
+1800058      010118 0752 MENTAL SUBJECT                 1600  JONESTOWN RD                            
+1800050      010118 0453 MENTAL SUBJECT                 2500  GRIFFITH RD                             
+1800128      010118 1948 MISSING PERSON NOT AT RISK     200   PLAZA HOLLOW DR                         
+1800126      010118 2015 MV THEFT                       7700  NORTH POINT BV                          
+1800114      010118 1847 MV THEFT                       2300  GREENWAY AV                             
+1800052      010118 0721 MV THEFT                       4300  JOHNSBOROUGH CT                         
+1800109      010118 1746 OBSCENE PHONE CALLS            300   HUFF CR                                 
+1800013      010118 0100 OPEN DOORS OR WINDOWS          2100  TWELFTH ST                              
+18000808     010118 2342 OTHER MISCELLANEOUS CALLS      1200  E TWENTY-FOURTH ST                      
+18000696     010118 2137 OTHER MISCELLANEOUS CALLS      1500  GLENN CENTER DR                         
+1800131      010118 2122 OTHER MISCELLANEOUS CALLS      500   W SPRAGUE ST                            
+18000668     010118 2050 OTHER MISCELLANEOUS CALLS      0     W DEVONSHIRE ST                         
+1800117      010118 2004 OTHER MISCELLANEOUS CALLS      100   EDGEWAY DR                              
+18000619     010118 1934 OTHER MISCELLANEOUS CALLS      2800  PATRIA ST                               
+18000599     010118 1834 OTHER MISCELLANEOUS CALLS      5100  AMBERCREST DR                           
+18000557     010118 1714 OTHER MISCELLANEOUS CALLS      3800  BETHANIA LOT DR                         
+1800105      010118 1652 OTHER MISCELLANEOUS CALLS      600   DANA CT                                 
+1800104      010118 1607 OTHER MISCELLANEOUS CALLS      1400  HOPE LN                                 
+18000523     010118 1605 OTHER MISCELLANEOUS CALLS      700   FERRELL CT                              
+18000424     010118 1339 OTHER MISCELLANEOUS CALLS      900   WASHINGTON AV                           
+18000415     010118 1326 OTHER MISCELLANEOUS CALLS      3800  CARVER SCHOOL RD                        
+18000400     010118 1301 OTHER MISCELLANEOUS CALLS      100   N DUNLEITH AV                           
+18000398     010118 1256 OTHER MISCELLANEOUS CALLS      300   PETERS CREEK PW                         
+18000380     010118 1223 OTHER MISCELLANEOUS CALLS      2300  CHEROKEE LN                             
+1800066      010118 1108 OTHER MISCELLANEOUS CALLS      2700  PATRIA ST                               
+1800060      010118 1036 OTHER MISCELLANEOUS CALLS      1000  NANCY LN                                
+1800065      010118 1028 OTHER MISCELLANEOUS CALLS      4100  EBERT RD/W CLEMMONSVILLE RD             
+1800054      010118 0845 OTHER MISCELLANEOUS CALLS      200   N CHURCH ST                             
+18000273     010118 0833 OTHER MISCELLANEOUS CALLS      2200  LULA ST                                 
+1800038      010118 0230 OTHER MISCELLANEOUS CALLS      1900  HAMPTON INN CT                          
+1800031      010118 0205 OTHER MISCELLANEOUS CALLS      1300  DERRY ST                                
+18000147     010118 0153 OTHER MISCELLANEOUS CALLS      100   CAPITOL LODGING CT                      
+1800028      010118 0137 OTHER MISCELLANEOUS CALLS      2000  INDEPENDENCE RD                         
+1800022      010118 0114 OTHER MISCELLANEOUS CALLS      3800  YARBROUGH AV/SUNNY DR                   
+1800045      010118 0436 PROWLER OR SUSPICIOUS PERSON   400   STRATTON AV                             
+1800009      010118 0030 PROWLER OR SUSPICIOUS PERSON   4900  MONTE VISTA ST                          
+18000370     010118 1208 PUBLIC DRUNK                   900   W CLEMMONSVILLE RD/HEGE ST              
+18000215     010118 0443 PUBLIC DRUNK                   100   S SPRUCE ST                             
+18000146     010118 0150 PUBLIC DRUNK                   0     E SEVENTH ST/N MAIN ST                  
+1800103      010118 1541 ROBBERY STRONGARM              1200  W CLEMMONSVILLE RD                      
+1800061      010118 1032 RUNAWAY                        600   W FOURTH ST                             
+1800138      010118 2307 SEX OFFENSE OTHER              4100  BENTON CREEK DR                         
+18000463     010118 1446 SEX OFFENSE OTHER              1400  NEW WALKERTOWN RD                       
+1800047      010118 0446 SEX OFFENSE OTHER              400   HIGH ST                                 
+18000529     010118 1631 SUICIDE RELATED                1100  SALEM VALLEY RD                         
+1800119      010118 2025 SUSPICIOUS VEHICLE             4400  CHEYENNE CT                             
+1800098      010118 1510 SUSPICIOUS VEHICLE             200   CECIL DR                                
+1800056      010118 0854 SUSPICIOUS VEHICLE             700   WESTOVER AV/SPRING GARDEN RD            
+18000689     010118 2120 TRAFFIC ACCIDENTS              900   E TWELFTH ST                            
+1800115      010118 1858 TRAFFIC ACCIDENTS              600   W FOURTH ST                             
+1800113      010118 1847 TRAFFIC ACCIDENTS              1600  FOX TROT CT                             
+18000550     010118 1706 TRAFFIC ACCIDENTS              1600  E TWENTY-FIFTH ST                       
+1800100      010118 1535 TRAFFIC ACCIDENTS              2700  URBAN ST/AUREOLE ST                     
+1800089      010118 1428 TRAFFIC ACCIDENTS              400   S HAWTHORNE RD                          
+1800080      010118 1344 TRAFFIC ACCIDENTS              2500  PEACHTREE ST/E CLEMMONSVILLE RD         
+1800070      010118 1207 TRAFFIC ACCIDENTS              100   OLD HOLLOW RD/UNIVERSITY PW             
+1800037      010118 0243 TRAFFIC ACCIDENTS              0     W TWENTY-FIFTH ST                       
+1800026      010118 0124 TRAFFIC ACCIDENTS              2400  N LIBERTY ST/E TWENTY-FIFTH ST          
+1800020      010118 0052 TRAFFIC ACCIDENTS              6400  UNIVERSITY PW                           
+1800010      010118 0049 TRAFFIC ACCIDENTS              2100  PETERS CREEK PW                         
+18000070     010118 0030 TRAFFIC ACCIDENTS              3600  CORNELL BV/E CLEMMONSVILLE RD           
+1800017      010118 0008 TRAFFIC ACCIDENTS              300   E CLEMMONSVILLE RD                      
+18000449     010118 1424 TRAFFIC VIOLATION RECKLESS OR  0     SB 52/NB 421                            
+18000767     010118 2302 TRANSLATOR                     3300  SILAS CREEK PW                          
+18000755     010118 2253 TRESPASSING                    600   W SIXTH ST                              
+1800125      010118 2054 TRESPASSING                    3400  OLD VINEYARD RD                         
+18000611     010118 1912 TRESPASSING                    400   TWENTY-FOURTH AND ONE-HALF ST           
+1800112      010118 1833 TRESPASSING                    600   W SIXTH ST                              
+18000527     010118 1621 TRESPASSING                    700   S GREEN ST                              
+1800094      010118 1517 TRESPASSING                    300   W FOURTH ST                             
+1800101      010118 1437 TRESPASSING                    600   AKRON DR                                
+18000401     010118 1304 TRESPASSING                    2200  LULA ST                                 
+1800051      010118 0724 TRESPASSING                    300   MEDICAL CENTER BV                       
+1800044      010118 0403 TRESPASSING                    3000  IRIS ST                                 
+1800043      010118 0349 TRESPASSING                    3400  PARKWAY VILLAGE CR                      
+1800042      010118 0346 TRESPASSING                    3600  EBERT CT                                
+1800023      010118 0059 TRESPASSING                    1100  NEW HOPE LN                             
+18000064     010118 0026 TRESPASSING                    1100  NEW HOPE LN                             
+18000055     010118 0017 TRESPASSING                    2700  UNIVERSITY PW                           
+18000549     010118 1705 TROUBLE NEIGHBORS OR JUVENILES 3700  KONNOAK DR                              
+1800085      010118 1425 UNAUTHORIZED USE OF VEHICLE    1200  LINK RD/HUTTON ST                       
+1800140      010118 2314 UNKNOWN TROUBLE                1000  LOUISE RD                               
+18000551     010118 1710 UNKNOWN TROUBLE                2200  BETHABARA POINTE DR                     
+18000471     010118 1456 UNKNOWN TROUBLE                1800  UNIVERSITY PW                           
+1800091      010118 1355 UNKNOWN TROUBLE                600   W ACADIA AV                             
+18000358     010118 1148 UNKNOWN TROUBLE                5100  LANSING DR                              
+18000268     010118 0806 UNKNOWN TROUBLE                3000  WALSH ST                                
+1800049      010118 0459 UNKNOWN TROUBLE                4400  STOWE ST                                
+18000223     010118 0455 UNKNOWN TROUBLE                5000  OLIVER STATION LN                       
+18000213     010118 0437 UNKNOWN TROUBLE                900   E SEVENTEENTH ST                        
+18000198     010118 0359 UNKNOWN TROUBLE                1900  BOWEN BV                                
+18000112     010118 0107 UNKNOWN TROUBLE                0     E CLEMMONSVILLE RD                      
+18000072     010118 0030 UNKNOWN TROUBLE                1500  N LIBERTY ST                            
+1800144      010118 2336 VANDALISM                      500   DENNY DR                                
+1800139      010118 2317 VANDALISM                      5400  COUNTRYSIDE DR                          
+1800120      010118 2026 VANDALISM                      100   HIGHLAND AV                             
+1800073      010118 1219 VANDALISM                      400   MAGNOLIA BRANCH DR                      
+1800053      010118 0753 VANDALISM                      2300  COLE RD                                 
+1800033      010118 0215 VANDALISM                      7000  BRANDEMERE LN                           
+1800134      010118 2259 VIOL CITY ORDINANCE            2300  W CLEMMONSVILLE RD                      
+18000741     010118 2233 WARRANT SERVICES               600   W SIXTH ST                              
+18000600     010118 1842 WARRANT SERVICES               300   MEDICAL CENTER BV                       
+18000537     010118 1651 WARRANT SERVICES               800   GRAY AV                                 
+18000515     010118 1547 WARRANT SERVICES               1600  ZUIDER ZEE CT                           
+18000183     010118 0313 WARRANT SERVICES               700   E TWENTY-EIGHTH ST                      
+18000140     010118 0137 WARRANT SERVICES               0     NB 421/KNOLLWOOD ST                     
+1800019      010118 0129 WEAPON VIOLATION               300   E CLEMMONSVILLE RD                      
