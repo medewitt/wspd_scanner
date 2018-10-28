@@ -1,0 +1,6 @@
+Public_AR_Current
+
+
+curl --form addressFile=@data/census_format.csv --form benchmark=Public_AR_Current https://geocoding.geo.census.gov/geocoder/locations/addressbatch --output data/geocoderesult_17.csv
+
+curl --form addressFile=@data/census_format_1.csv --form benchmark=Public_AR_Current https://geocoding.geo.census.gov/geocoder/locations/addressbatch --output data/geocoderesult_20.csv
