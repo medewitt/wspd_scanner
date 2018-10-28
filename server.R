@@ -18,6 +18,7 @@ library(rgdal)
 library(raster)
 library(htmltools)
 library(lme4)
+library(sjPlot)
 library(DT)
 
 # add ward shape files
