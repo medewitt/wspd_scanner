@@ -12,7 +12,7 @@ library(shinydashboard)
 library(leaflet)
 library(tidyverse)
 library(shinyjs)
-library(DT)
+#library(DT)
 
 crime_dat <- read_rds("data/crime_data_for_app.RDS") %>% 
   mutate(day_of_week = lubridate::wday(incident_date, label = TRUE),
@@ -109,7 +109,7 @@ shinydashboard::dashboardPage(skin = "yellow",
                                             plotOutput("demog_points", click = "plot_point",
                                                        brush = brushOpts(id = "plot_brush")), width = 8),
                                         box(h4("Selected Values"),
-                                            dataTableOutput("brush_info"), width = 12)
+                                            DT::dataTableOutput("brush_info"), width = 12)
                        ),
                        
                        box(downloadButton("download_descriptive", label = "Download All?"), width = 6)
@@ -151,7 +151,7 @@ shinydashboard::dashboardPage(skin = "yellow",
                     width = 6)),
                 leafletOutput("map"),
                 h3("Below Find the Events That Have Occured in The Map Window"),
-                dataTableOutput("table")#,
+                DT::dataTableOutput("table")#,
                 #downloadButton("downloadCsv", "Download as CSV")
               )
       ),
@@ -196,7 +196,7 @@ shinydashboard::dashboardPage(skin = "yellow",
                 box(verbatimTextOutput("model_fit"), width =6),
                 box(plotOutput("model_graph"), width =6),
                 box(h3("Model Data"), width =12),
-                box(dataTableOutput("data_to_model"), width = 12)
+                box(DT::dataTableOutput("data_to_model"), width = 12)
               ))
     )
   )

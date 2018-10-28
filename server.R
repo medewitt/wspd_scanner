@@ -16,7 +16,7 @@ library(sf)
 library(htmltools)
 library(lme4)
 library(sjPlot)
-library(DT)
+#library(DT)
 
 # add ward shape files
 wards <- st_read("data/wards_20150327.shp")
@@ -172,7 +172,7 @@ shinyServer(function(input, output, session) {
   }
   
   #Brushed Points
-  output$brush_info <- renderDataTable(
+  output$brush_info <- DT::renderDataTable(
     brushed_points(), extensions = "Buttons",
     options = list(dom = "Bfrtip",pageLength = 50,
                    buttons = c("copy", "csv", "excel", "pdf", "print"))
@@ -399,7 +399,7 @@ shinyServer(function(input, output, session) {
     
     library(DT)
     
-    output$table <- renderDataTable(
+    output$table <- DT::renderDataTable(
       events_in_bounds(), extensions = "Buttons",
       options = list(dom = "Bfrtip",pageLength = 50,
                      buttons = c("copy", "csv", "excel", "pdf", "print")))
