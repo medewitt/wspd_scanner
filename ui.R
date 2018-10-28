@@ -13,7 +13,7 @@ library(leaflet)
 library(tidyverse)
 library(shinyjs)
 
-crime_dat <- read_csv("data/geocoded_incidents_with_census_data.csv") %>% 
+crime_dat <- read_rds("data/crime_data_for_app.RDS") %>% 
   mutate(day_of_week = lubridate::wday(incident_date, label = TRUE),
          month = lubridate::month(incident_date, label = TRUE))
 
