@@ -12,6 +12,7 @@ library(shinydashboard)
 library(leaflet)
 library(tidyverse)
 library(shinyjs)
+library(DT)
 
 crime_dat <- read_rds("data/crime_data_for_app.RDS") %>% 
   mutate(day_of_week = lubridate::wday(incident_date, label = TRUE),
