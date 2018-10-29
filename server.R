@@ -396,9 +396,6 @@ shinyServer(function(input, output, session) {
       
     })
     
-    
-    library(DT)
-    
     output$table <- DT::renderDataTable(
       events_in_bounds(), extensions = "Buttons",
       options = list(dom = "Bfrtip",pageLength = 50,

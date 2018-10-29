@@ -11,7 +11,7 @@ library(shiny)
 library(shinydashboard)
 library(leaflet)
 library(tidyverse)
-library(shinyjs)
+#library(shinyjs)
 #library(DT)
 
 crime_dat <- read_rds("data/crime_data_for_app.RDS") %>% 
