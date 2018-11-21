@@ -29,6 +29,7 @@ shinydashboard::dashboardPage(skin = "yellow",
   #Add sidebar elements
   dashboardSidebar(sidebarMenu(
     menuItem("About", tabName = "about", icon = icon("archive")),
+    menuItem("Data Dictionary", tabName = "dict", icon = icon("bars")),
     menuItem(
       "Descriptive Stats",
       tabName =  "descr",
@@ -88,18 +89,26 @@ shinydashboard::dashboardPage(skin = "yellow",
                 box(uiOutput("census_logo"), width = 8)
               )),
       
-      # Descriptive Statistics
+
+# data dictionary ---------------------------------------------------------
+
+      tabItem(tabName = "dict",
+              fluidRow(
+              includeMarkdown("data_dictionary.md")
+              )
+      ),
+      # Descriptive Statistics ------------------------------------
       tabItem(tabName ="descr",
               fluidRow(h2("This section investigates the different types of incidents that occur by Ward."), 
                        h3("These can then be compared to the overall Winston-Salem area."),
+                       box(selectizeInput("month", h3("Month"), 
+                                          selected = "", choices = levels(as.factor(crime_dat$month))),
+                           width = 6),
                        box(selectizeInput("ward", h3("Ward"), 
                                       selected = "Northwest", choices = levels(as.factor(crime_dat$Ward))),
                            width = 6),
-                       box(selectizeInput("month", h3("Month"), 
-                                      selected = "", choices = levels(as.factor(crime_dat$month))),
-                           width = 6),
-                       box(plotOutput("event_total"), width = 6),
                        box(plotOutput("map_by_month"), width = 6),
+                       box(plotOutput("event_total"), width = 6),
                        box(checkboxInput("demog", h4("See Demographics?")),width = 12),
                        conditionalPanel("input.demog",
                                         box(

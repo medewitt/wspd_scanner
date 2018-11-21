@@ -24,6 +24,7 @@ str_extract_all(string = a, pattern = "\\d{6}\\s([A-z,]+)")->defendant_name
 str_extract_all(string = a, pattern = "\\s\\s(\\w+,\\w+|\\w+,\\w+,\\w+)")->plaintiff_name
 plaintiff_name[[84]]
 a[45:55]
+
 # Add a helper function for cleaning purposes
 clean_nas <- function(x){
   if(identical(x, character(0))) NA_character_ else x

@@ -1,0 +1,13 @@
+name: wspd_scanner
+title: wspd_scanner
+username:
+account: mdewitt
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 539015
+bundleId: 1669929
+url: https://mdewitt.shinyapps.io/wspd_scanner/
+when: 1540826985.11809
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: munge

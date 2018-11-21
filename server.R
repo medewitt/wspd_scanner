@@ -175,7 +175,7 @@ shinyServer(function(input, output, session) {
   output$brush_info <- DT::renderDataTable(
     brushed_points(), extensions = "Buttons",
     options = list(dom = "Bfrtip",pageLength = 50,
-                   buttons = c("copy", "csv", "excel", "pdf", "print"))
+                   buttons = c("copy", "csv", "excel"))
     
   )
 
