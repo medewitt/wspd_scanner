@@ -215,11 +215,12 @@ shinyServer(function(input, output, session) {
     crime_dat %>% 
       group_by(month, day_of_week) %>% 
       summarise(n = n()) %>% 
-      ggplot(aes(day_of_week, n, color = month, group = month))+
-      geom_line()+
+      ggplot(aes(day_of_week, n))+
+      geom_boxplot()+
+      facet_wrap(~month)+
       theme_minimal()+
       labs(
-        title = "Incidents over Time",
+        title = "Top Incident Days of the Week",
         color = "Month",
         caption = "Data from Winston-Salem Police Department",
         x = NULL
