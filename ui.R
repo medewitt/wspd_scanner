@@ -41,7 +41,8 @@ shinydashboard::dashboardPage(skin = "yellow",
       icon = icon("calendar")
     ),
     menuItem("Geolocator", tabName = "geolocate", icon = icon("globe")),
-    menuItem("Prediction", tabName = "preds", icon = icon("paper-plane"))
+    menuItem("Prediction", tabName = "preds", icon = icon("paper-plane")),
+    menuItem("Exploratory", tabName = "eda", icon = icon("search"))
   )),
   # Add Body Elements
   
@@ -206,7 +207,53 @@ shinydashboard::dashboardPage(skin = "yellow",
                 box(plotOutput("model_graph"), width =6),
                 box(h3("Model Data"), width =12),
                 box(DT::dataTableOutput("data_to_model"), width = 12)
-              ))
+              )),
+# exploratory analysis ----------------------------------------------------
+        tabItem(tabName = "eda",
+                fluidRow(
+                  h1("Exploratory Modeling"),
+                  br(),
+                  h2("Principal Components Analysis"),
+                  "This section utilises Principal Components Analysis (PCA) in 
+                  order to perform some exploratory data analysis. 
+                  PCA Can be used to establish a narrative around the different variables. 
+                  Here summary statistics
+                  have been computed for each census block within Winston-Salem. 
+                  These data include
+                  the per-capita top 10 calls, as well as demographics and the number of weekend events.
+                  These metrics are are scaled before they are supplied to the PCA analysis.",
+                  br(),
+                  br(),
+                  box(selectizeInput("pca_group", "Select PCA Group",
+                                     selected = "block",
+                                     choices = c("Ward" = "Ward",
+                                                 "tract" = "tract",
+                                                 "block" = "block")), width = 4),
+                  box(numericInput("pca1", "First Component for Biplot", 
+                                   min = 1, 
+                                   max = 13, 
+                                   value = 1, step = 1), width = 4),
+                  box(numericInput("pca2", "Second Component for Biplot", 
+                                   min = 1, 
+                                   max = 13, 
+                                   value = 2, step = 1), width = 4),
+                  box(plotOutput("biplot"), width = 6),
+                  box(plotOutput("pca_cum"), width = 6),
+                  h2("Nearest Neighbours Analysis"),
+                  br(),
+                  "The purpose of k-means nearest neighbours is to
+                  use Euclidean distances and a pre-specified number of cluster
+                  centers to group data points. T,his can be used as a means of 
+                  unsupervised learning",
+                  br(),
+                  box(selectInput('xcol', 'X Variable', NULL), width = 4),
+                  box(selectInput('ycol', 'Y Variable', NULL),width = 4),
+                  box(numericInput('clusters', 'Cluster count', 3,
+                               min = 1, max = 9), width = 4),
+                  box(plotOutput("knn_plot"), width = 6),
+                  box(dataTableOutput("knn_table"), width = 6)
+                ))
+
     )
   )
 )

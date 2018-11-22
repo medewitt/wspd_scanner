@@ -36,6 +36,15 @@ content <- wards_3 %>%
 crime_dat <- read_rds("data/crime_data_for_app.RDS") %>% 
   mutate(day_of_week = lubridate::wday(incident_date, label = TRUE),
          month = lubridate::month(incident_date, label = TRUE))
+# Top 10 Calls
+
+crime_dat %>% 
+  group_by(call_type) %>% 
+  summarise(n = n()) %>% 
+  top_n(10) %>% 
+  pull(call_type)->top_10
+
+# By block data
 
 all_winston <- crime_dat %>% 
   group_by(Ward) %>% 
@@ -504,5 +513,170 @@ shinyServer(function(input, output, session) {
       model_data()
     }
     )
+# eda ---------------------------------------------------------------------
+    # Handle non-integer and users putting in the same values
+    observe({
+      # Correct for integers
+      pca_1_slider <- round(input$pca1,0)
+      pca_2_slider <- round(input$pca2,0)
+      # Make sure that pca1 != pca2
+      if(pca_1_slider==pca_2_slider){
+        if(pca_2_slider+1 < 13){
+          pca_2_slider <- pca_2_slider+1
+        } else{
+          pca_2_slider <- 1
+        }
+      }
+      #Update the UI with the new corrected values
+      updateSliderInput(session, inputId = "pca1", value = pca_1_slider)
+      updateSliderInput(session, inputId = "pca2", value = pca_2_slider)
+    })
     
+    # Generate the PCA
+    # Top Ten Calls by Block
+    pca_data <- reactive({
+      
+      grouping_var <- sym(input$pca_group)
+      crime_dat %>% 
+        filter(call_type %in% top_10) %>% 
+        group_by(!!grouping_var, call_type) %>% 
+        summarise(n = n(),
+                  population = mean(population)) %>%
+        mutate(perc_capita = n/population) %>% 
+        select(-n, -population) %>% 
+        spread(call_type, perc_capita, fill = 0) %>% 
+        setNames(gsub(" ", "_", names(.)))-> top_10_calls
+      
+      by_block <- crime_dat %>%
+        mutate(week_day_event = ifelse(day_of_week %in% 
+                                         c("Sun", "Fri", "Sat"),"we","wd")) %>% 
+        group_by(!!grouping_var, week_day_event) %>% 
+        summarise(events = n()) %>% 
+        mutate(perc = events/sum(events)*100) %>% 
+        select(-events) %>% 
+        spread(week_day_event, perc, fill = 0) %>% 
+        # Brink in Crime Data for Summaries
+        left_join(crime_dat) %>% 
+        group_by(!!grouping_var) %>% 
+        summarise(pctpov = median(pctpov, na.rm = T),
+                  pctwhite = median(pctwhite, na.rm = T),
+                  we = mean(we, na.rm = T),
+                  #wd = mean(wd, na.rm = T)
+        ) %>% 
+        left_join(top_10_calls) %>% 
+        mutate_if(is.numeric, funs(replace(., is.na(.), 0)))
+    })
+    
+    pca_fit <- reactive({
+      grouping_var <- sym(input$pca_group)
+      x <- select(pca_data(), -!!grouping_var) %>% 
+        as.matrix()
+      # Assign Row Names
+      rownames(x) <- pca_data() %>% 
+        pull(!!grouping_var)
+      
+      pca_fit <- prcomp(x, scale. = TRUE)
+      
+      pca_fit
+    })
+    
+    
+    # Make Cum Variance Graph Function
+    make_cum_explained <- function(){
+      a<-summary(pca_fit())[["importance"]] %>% 
+        as.data.frame() %>% 
+        rownames_to_column(var = "parameter") %>% 
+        gather(component, value, -parameter) %>% 
+        filter(grepl("Cum", parameter ))
+      a %>% 
+        mutate(component = factor(component),
+               component = fct_inorder(component)) %>% 
+        ggplot(aes(component, value, group = 1))+
+        geom_step(size = 2)+
+        scale_y_continuous(labels = scales::percent, limits = c(0,1))+
+        labs(
+          title = "Cummulative Variance Explained",
+          y = "Variance Explained",
+          x= "Component"
+        )+
+        theme_minimal()+
+        geom_hline(yintercept = .8, lty = "dashed", color = "orange")
+    }
+    
+    
+    # Now make a biplot
+    my_biplot_values <- reactive({
+      c(input$pca1, input$pca2)
+    })
+    
+    # Function to Generate Graphs
+    make_biplot <- function(){
+      par(mar = c(5.1, 4.1, 0, 1))
+      biplot(pca_fit(),  choices = my_biplot_values(),
+             main = "Biplot of PCA")
+    }
+    #Output graph
+    output$biplot <- renderPlot(
+      if(is.null(input$pca1)|is.null(input$pca2)){
+        NULL
+      } else{
+        make_biplot()
+      }
+      
+    )
+    output$pca_cum <- renderPlot(
+      make_cum_explained()
+    )
+     # KNN ----
+    observe({
+      dat <- pca_data() %>% 
+        select(-!!sym(input$pca_group))
+      
+      available_option <- names(dat)
+      if(!is.na(dim(dat)[[1]])){
+        updateSelectInput(session, "xcol", choices = available_option)
+        updateSelectInput(session, "ycol",
+                          choices = available_option, 
+                          selected = available_option[[2]])
+      }
+    })
+    # Combine the selected variables into a new data frame
+     selectedData <- reactive({
+       if(!is.null(input$xcol)|!is.null(input$ycol)){
+         pca_data() %>% 
+           select(!!sym(input$xcol), !!sym(input$ycol))
+       } else{
+         NULL
+       }
+       
+     })
+    # Make Clusters
+    clusters <- reactive({
+      kmeans(selectedData(), input$clusters)
+    })
+    
+    # Function to make cluster graph
+    make_knn_graph <- function(){
+      palette(c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3",
+                "#FF7F00", "#FFFF33", "#A65628", "#F781BF", "#999999"))
+      
+      par(mar = c(5.1, 4.1, 0, 1))
+      plot(selectedData(),
+           col = clusters()$cluster,
+           pch = 20, cex = 3)
+      points(clusters()$centers, pch = 4, cex = 4, lwd = 4)
+    }
+    
+    # Generate Output dataset
+    output$knn_plot <- renderPlot({
+      make_knn_graph()
+    })
+    # Generate Output Data Table
+    
+    output$knn_table <- renderDataTable({
+      dat <- pca_data() %>% 
+        pull(!!sym(input$pca_group))
+      
+      data_frame(Group = dat, Cluster = clusters()$cluster)
+    })
 })
