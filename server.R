@@ -93,7 +93,7 @@ shinyServer(function(input, output, session) {
       geom_col()+
       coord_flip()+
       labs(
-        title = paste0("Top 10 Incidents for Winston-Salem NC in ", input$month),
+        title = paste0("Top 10 Incidents for Winston-Salem NC \nin ", input$month),
         caption = "Data from Winston-Salem Police Department",
         x = NULL
       )+
@@ -613,17 +613,28 @@ shinyServer(function(input, output, session) {
       # Correct for integers
       pca_1_slider <- round(input$pca1,0)
       pca_2_slider <- round(input$pca2,0)
+      
+      my_limit <-if(input$pca_group=="Ward"){
+        8
+      } else{
+        13
+      }
+      
       # Make sure that pca1 != pca2
       if(pca_1_slider==pca_2_slider){
-        if(pca_2_slider+1 < 13){
+        if(pca_2_slider+1 < my_limit){
           pca_2_slider <- pca_2_slider+1
         } else{
           pca_2_slider <- 1
         }
       }
       #Update the UI with the new corrected values
-      updateSliderInput(session, inputId = "pca1", value = pca_1_slider)
-      updateSliderInput(session, inputId = "pca2", value = pca_2_slider)
+      updateSliderInput(session, inputId = "pca1", 
+                        value = pca_1_slider,
+                        max = my_limit)
+      updateSliderInput(session, inputId = "pca2", 
+                        value = pca_2_slider,
+                        max = my_limit)
     })
     
     # Generate the PCA
