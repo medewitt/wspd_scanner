@@ -36,7 +36,7 @@ content <- wards_3 %>%
 crime_dat <- read_rds("data/crime_data_for_app.RDS") %>% 
   mutate(day_of_week = lubridate::wday(incident_date, label = TRUE),
          month = lubridate::month(incident_date, label = TRUE))
-# Top 10 Calls
+#Top 10 Calls
 
 crime_dat %>% 
   group_by(call_type) %>% 
@@ -499,7 +499,7 @@ shinyServer(function(input, output, session) {
     
     # Output model fit
     output$model_fit <- renderPrint({
-      summary(fit())
+      arm::display(fit())
     })
     # Output model fit
     output$model_graph <- renderPlot({
@@ -512,6 +512,66 @@ shinyServer(function(input, output, session) {
     output$data_to_model <- renderDataTable({
       model_data()
     }
+    )
+    
+    #poisson regression---
+    # Create the data to be used for modeling
+    poi_dat <- reactive({
+      my_group <- sym(input$poi_group)
+      crime_dat %>% 
+        group_by(!!my_group) %>% 
+        summarise(calls = n(),
+                  pctpov = median(pctpov),
+                  pctwhite = median(pctwhite),
+                  population = median(population))
+    })
+    
+    poi_fit <- reactive({
+      
+      fit <- glm(paste0("calls~", paste0(input$poi_preds, collapse = "+"),
+                        "+offset(log(population))"),
+                 data = poi_dat(), 
+                 family = "poisson"
+                 )
+      fit
+    })
+    
+    # Output Model Fit
+    output$poi_fit <- renderPrint(
+      summary(poi_fit())
+    )
+    
+    # Predictions vs Actuals
+    make_poi_graph <- function(){
+      dat <- poi_dat()
+      my_group <- sym(input$poi_group)
+      dat$prediction <- round(predict(poi_fit(), 
+                                      newdata = dat, 
+                                      type = "response"),0)
+      plot_min <- min(dat$prediction, dat$calls)
+      plot_max <- max(dat$prediction, dat$calls)
+      dat %>% 
+        ggplot(aes(calls, prediction, color = !!my_group))+
+        geom_point(aes(size = population))+
+        geom_abline(slope = 1, lty = "dashed", color = "orange")+
+        theme_minimal()+
+        theme(legend.position = "none")+
+        labs(
+          title = "Actual Calls vs Predicted\n(Bubble Proportional to Population)",
+          #subtitle = "Bubble Size Proportional to Population",
+          x = "Actual Number of Calls",
+          y = "Predicted Number of Calls",
+          size = "Population",
+          caption = "Data: WSPD + US Census"
+        )+
+        scale_x_continuous(limits = c(plot_min, plot_max))+
+        scale_y_continuous(limits = c(plot_min, plot_max))
+    }
+    
+    # Generate Graph for Output
+    
+    output$poi_plot <- renderPlotly(
+      plotly::ggplotly(make_poi_graph())
     )
 # eda ---------------------------------------------------------------------
     # Handle non-integer and users putting in the same values

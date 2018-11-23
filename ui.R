@@ -7,12 +7,14 @@
 #    http://shiny.rstudio.com/
 #
 
-library(shiny)
+library(shiny) 
 library(shinydashboard)
 library(leaflet)
 library(tidyverse)
 #library(shinyjs)
 library(DT)
+library(arm)
+library(plotly)
 
 crime_dat <- read_rds("data/crime_data_for_app.RDS") %>% 
   mutate(day_of_week = lubridate::wday(incident_date, label = TRUE),
@@ -41,7 +43,10 @@ shinydashboard::dashboardPage(skin = "yellow",
       icon = icon("calendar")
     ),
     menuItem("Geolocator", tabName = "geolocate", icon = icon("globe")),
-    menuItem("Prediction", tabName = "preds", icon = icon("paper-plane")),
+    menuItem("Prediction Probabilities", 
+             tabName = "preds", icon = icon("paper-plane")),
+    menuItem("Predicting Calls", 
+             tabName = "pred_poi", icon = icon("paper-plane")),
     menuItem("Exploratory", tabName = "eda", icon = icon("search"))
   )),
   # Add Body Elements
@@ -176,6 +181,7 @@ shinydashboard::dashboardPage(skin = "yellow",
                                 em("Caution in that there is definitely colinearity and spatial autocorrelation in the predictors and the Wards.")),
                     width = 12),
                 br(),
+                h2("Prediction of Probability of a Given Call Type"),
                 box(h4("Population Level Effects/ Predictors"),
                 tags$ul(
                   tags$li("Percent White - The Percentage of Citizens Who are White"), 
@@ -207,7 +213,33 @@ shinydashboard::dashboardPage(skin = "yellow",
                 box(plotOutput("model_graph"), width =6),
                 box(h3("Model Data"), width =12),
                 box(DT::dataTableOutput("data_to_model"), width = 12)
-              )),
+              )
+      ),
+# Poisson Regression ----
+     tabItem(tabName = "pred_poi",
+             fluidRow(
+               h2("Predicting Calls"),
+               p("This section attempts to predict the number of calls
+                by grouping variable in order to understand the difference
+                between the actual number of calls and the actual observed
+                number of calls. This analysis uses a Poisson distribution
+                to model the number of calls in a given area. The population
+                 is used to offset the Poisson regression."),
+               br(),
+               box(selectizeInput("poi_preds", "Predictors", 
+                                  selected = "pctpov",
+                                  choices = c("Pct Poverty" = "pctpov", 
+                                              "Pct White"= "pctwhite"
+                                              ),
+                                  multiple = TRUE), width = 6),
+               box(selectizeInput("poi_group", "Grouping Variable",
+                                  choices = c("Ward" = "Ward",
+                                              "tract" = "tract",
+                                              "block" = "block"),
+                                  selected = "Ward"), width = 6),
+               box(verbatimTextOutput("poi_fit"), width =6),
+               box(plotlyOutput("poi_plot"), width = 6)
+             )),
 # exploratory analysis ----------------------------------------------------
         tabItem(tabName = "eda",
                 fluidRow(
