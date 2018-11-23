@@ -35,7 +35,9 @@ content <- wards_3 %>%
 # bring in crime data
 crime_dat <- read_rds("data/crime_data_for_app.RDS") %>% 
   mutate(day_of_week = lubridate::wday(incident_date, label = TRUE),
-         month = lubridate::month(incident_date, label = TRUE))
+         month = lubridate::month(incident_date, label = TRUE)) %>% 
+  filter(Ward != '0')
+
 #Top 10 Calls
 
 crime_dat %>% 
@@ -112,7 +114,7 @@ shinyServer(function(input, output, session) {
       geom_col()+
       coord_flip()+
       labs(
-        title = paste0("Top 10 Incidents for the ", input$ward, " in ", input$month),
+        title = paste0("Top 10 Incidents for the ", input$ward, "\nin ", input$month),
         caption = "Data from Winston-Salem Police Department",
         x= NULL
       )+
@@ -229,7 +231,7 @@ shinyServer(function(input, output, session) {
       facet_wrap(~month)+
       theme_minimal()+
       labs(
-        title = "Top Incident Days of the Week",
+        title = "Top Incident Days of the Week for Each Month",
         color = "Month",
         caption = "Data from Winston-Salem Police Department",
         x = NULL
@@ -480,21 +482,26 @@ shinyServer(function(input, output, session) {
     })
     
     fit <- reactive({
+      withProgress(message = 'Running your calculation...', value = 0, {
+        fit <- 
       if(!input$addgroupeffects){
         fit <- glm(paste0("y~", paste0(input$predictors, collapse = "+")),
                    data = model_data(), family = "binomial")
       } else if (length(input$groups)==1){
-        fit <-lmer(paste0("y~", paste0(input$predictors, collapse = "+"),
+        fit <-glmer(paste0("y~", paste0(input$predictors, collapse = "+"),
                           paste0("+ (1|",input$groups,")")),
                    data = model_data(), family = "binomial")
       } else if (length(input$groups)==2){
-        fit <-lmer(paste0("y~", paste0(input$predictors, collapse = "+"),
+        fit <-glmer(paste0("y~", paste0(input$predictors, collapse = "+"),
                           paste0("+ (1|",input$groups[[1]],")","+ (1|",input$groups[[2]],")")),
                    data = model_data(), family = "binomial")
       } else{
         NULL
       }
-      
+        setProgress(1)
+        
+        fit
+      })
     })
     
     # Output model fit
@@ -514,18 +521,32 @@ shinyServer(function(input, output, session) {
     }
     )
     
-    #poisson regression---
+    # poisson regression----
     # Create the data to be used for modeling
     poi_dat <- reactive({
       my_group <- sym(input$poi_group)
+      
+      population_dat <- crime_dat %>% 
+        ungroup() %>% 
+        select(!!my_group, NAME, population) %>% 
+        unique() %>%
+        group_by(NAME) %>% 
+        mutate(number = max(row_number()),
+               mod_pop = population/number) %>% 
+        ungroup() %>% 
+        group_by(!!my_group) %>% 
+        summarise(population = sum(mod_pop))
+      
       crime_dat %>% 
         group_by(!!my_group) %>% 
         summarise(calls = n(),
                   pctpov = median(pctpov),
-                  pctwhite = median(pctwhite),
-                  population = median(population))
+                  pctwhite = median(pctwhite)) %>% 
+        left_join(population_dat)
+      
     })
     
+    # Make the fit object for poisson
     poi_fit <- reactive({
       
       fit <- glm(paste0("calls~", paste0(input$poi_preds, collapse = "+"),
@@ -572,6 +593,19 @@ shinyServer(function(input, output, session) {
     
     output$poi_plot <- renderPlotly(
       plotly::ggplotly(make_poi_graph())
+    )
+    
+    # Make Download for Graph
+    
+    output$poi_plot_pdf <-downloadHandler(
+      filename = function() {
+        paste0(Sys.Date(),"WSPD-poisson-regression-plots.pdf")
+      },
+      content = function(file) {
+        pdf(file)
+        print( make_poi_graph() )  
+        dev.off()
+      }
     )
 # eda ---------------------------------------------------------------------
     # Handle non-integer and users putting in the same values
@@ -673,7 +707,7 @@ shinyServer(function(input, output, session) {
     make_biplot <- function(){
       par(mar = c(5.1, 4.1, 0, 1))
       biplot(pca_fit(),  choices = my_biplot_values(),
-             main = "Biplot of PCA")
+             main = "Biplot for Principal Components")
     }
     #Output graph
     output$biplot <- renderPlot(
@@ -712,31 +746,48 @@ shinyServer(function(input, output, session) {
      })
     # Make Clusters
     clusters <- reactive({
-      kmeans(selectedData(), input$clusters)
+      kmeans(selectedData(), input$clusters, algorithm = input$kmeans_algo)
     })
     
     # Function to make cluster graph
-    make_knn_graph <- function(){
+    make_kmeans_graph <- function(){
       palette(c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3",
                 "#FF7F00", "#FFFF33", "#A65628", "#F781BF", "#999999"))
       
-      par(mar = c(5.1, 4.1, 0, 1))
+      title <- paste0("K-Means Plot Using ", input$clusters," Clusters and ",input$kmeans_algo)
+      
+      par(mar = c(5.1, 4.1, 1, 1))
       plot(selectedData(),
            col = clusters()$cluster,
-           pch = 20, cex = 3)
+           pch = 20, cex = 3, main = title)
       points(clusters()$centers, pch = 4, cex = 4, lwd = 4)
     }
     
     # Generate Output dataset
-    output$knn_plot <- renderPlot({
-      make_knn_graph()
+    output$kmeans_plot <- renderPlot({
+      make_kmeans_graph()
     })
     # Generate Output Data Table
     
-    output$knn_table <- renderDataTable({
+    output$kmeans_table <- renderDataTable({
       dat <- pca_data() %>% 
         pull(!!sym(input$pca_group))
       
       data_frame(Group = dat, Cluster = clusters()$cluster)
     })
+    
+    # Download EDA Plots
+    
+    output$eda_plots <- downloadHandler(
+      filename = function() {
+        paste0(Sys.Date(),"WSPD-EDA-plots.pdf")
+      },
+      content = function(file) {
+        pdf(file)
+        print( make_biplot() )  
+        print( make_cum_explained() )  
+        print( make_knn_graph() )
+        dev.off()
+      }
+    )
 })

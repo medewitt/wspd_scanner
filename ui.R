@@ -134,8 +134,8 @@ shinydashboard::dashboardPage(skin = "yellow",
       # Analysis of When Things Happen
       tabItem(tabName = "daytime",
               fluidRow(h1("Analysis By Dates and Times"),
-                       box(plotOutput("day_of_week"), width = 6),
-                       box(plotOutput("day_of_week_trend"), width = 6),
+                       box(plotOutput("day_of_week"), width = 4),
+                       box(plotOutput("day_of_week_trend"), width = 8),
                        box(plotOutput("month_fig"), width = 12),
                        box(plotOutput("ward_month_fig"), width = 12),
                        box(plotOutput("plot_time"), width = 12),
@@ -171,7 +171,7 @@ shinydashboard::dashboardPage(skin = "yellow",
               )
       ),
       
-      # Predictive Modeling
+      # Predictive Modeling ----
       tabItem(tabName = "preds",
               fluidRow(
                 withMathJax(),
@@ -208,6 +208,14 @@ shinydashboard::dashboardPage(skin = "yellow",
                                                             "Tract" = "tract"),
                                                 multiple = TRUE)), width = 3),
                 box(h3("Model Outputs"), width = 12),
+                tags$head(tags$style(HTML("
+                                #equation {
+                                  text-align: center;
+                                }
+                                div.box-header {
+                                  text-align: center;
+                                }
+                                "))),
                 box(uiOutput("equation"), width = 12),
                 box(verbatimTextOutput("model_fit"), width =6),
                 box(plotOutput("model_graph"), width =6),
@@ -238,7 +246,8 @@ shinydashboard::dashboardPage(skin = "yellow",
                                               "block" = "block"),
                                   selected = "Ward"), width = 6),
                box(verbatimTextOutput("poi_fit"), width =6),
-               box(plotlyOutput("poi_plot"), width = 6)
+               box(plotlyOutput("poi_plot"), width = 6),
+               box(downloadButton("poi_plot_pdf"), width = 3)
              )),
 # exploratory analysis ----------------------------------------------------
         tabItem(tabName = "eda",
@@ -257,10 +266,10 @@ shinydashboard::dashboardPage(skin = "yellow",
                   br(),
                   br(),
                   box(selectizeInput("pca_group", "Select PCA Group",
-                                     selected = "block",
+                                     selected = "Ward",
                                      choices = c("Ward" = "Ward",
-                                                 "tract" = "tract",
-                                                 "block" = "block")), width = 4),
+                                                 "Tract" = "tract",
+                                                 "Block" = "block")), width = 4),
                   box(numericInput("pca1", "First Component for Biplot", 
                                    min = 1, 
                                    max = 13, 
@@ -271,19 +280,24 @@ shinydashboard::dashboardPage(skin = "yellow",
                                    value = 2, step = 1), width = 4),
                   box(plotOutput("biplot"), width = 6),
                   box(plotOutput("pca_cum"), width = 6),
-                  h2("Nearest Neighbours Analysis"),
+                  h2("Cluster Analysis"),
                   br(),
-                  "The purpose of k-means nearest neighbours is to
+                  "The purpose of k-means clustering is to
                   use Euclidean distances and a pre-specified number of cluster
-                  centers to group data points. T,his can be used as a means of 
-                  unsupervised learning",
+                  centers to group data points. This can be used as a means of 
+                  unsupervised learning.",
                   br(),
-                  box(selectInput('xcol', 'X Variable', NULL), width = 4),
-                  box(selectInput('ycol', 'Y Variable', NULL),width = 4),
+                  box(selectInput('xcol', 'X Variable', NULL), width = 3),
+                  box(selectInput('ycol', 'Y Variable', NULL),width = 3),
                   box(numericInput('clusters', 'Cluster count', 3,
-                               min = 1, max = 9), width = 4),
-                  box(plotOutput("knn_plot"), width = 6),
-                  box(dataTableOutput("knn_table"), width = 6)
+                               min = 1, max = 9), width = 3),
+                  box(selectizeInput("kmeans_algo", "Algorithm", 
+                                     choices = c("Hartigan-Wong", 
+                                                 "Lloyd", "Forgy","MacQueen"),
+                                     selected = "Hartigan-Wong"), width=3),
+                  box(plotOutput("kmeans_plot"), width = 6),
+                  box(dataTableOutput("kmeans_table"), width = 6),
+                  box(downloadButton("eda_plots", label = "Data"), width = 12)
                 ))
 
     )

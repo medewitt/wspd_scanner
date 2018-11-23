@@ -5,9 +5,9 @@ account: mdewitt
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 539015
-bundleId: 1669929
+bundleId: 1715796
 url: https://mdewitt.shinyapps.io/wspd_scanner/
-when: 1540826985.11809
+when: 1542932957.98404
 asMultiple: FALSE
 asStatic: FALSE
 ignoredFiles: munge
